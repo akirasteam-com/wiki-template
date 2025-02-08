@@ -28,17 +28,7 @@ To create your own wiki using open-source code, follow these steps:
     cd wiki-template
     ```
 
-3. Generate the application key:
-    ```bash
-    php artisan key:generate
-    ```
-
-4. Run database migrations:
-    ```bash
-    php artisan migrate
-    ```
-
-5. Start the development server:
+3. Start the development server:
     ```bash
     php artisan serve
     ```
