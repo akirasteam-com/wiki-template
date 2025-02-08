@@ -1,0 +1,199 @@
+/* =========================
+   Minimal Wiki Theme
+   ========================= */
+
+/* Variables */
+:root {
+    --bg-color: #ffffff;
+    --content-bg: #f7f7f7;
+    --header-bg: #f0f0f0;
+    --sidebar-bg: #eaeaea;
+    --footer-bg: #f0f0f0;
+    --text-color: #333333;
+    --link-color: #007acc;
+    --link-hover: #005fa3;
+    --border-color: #cccccc;
+    --font-family: Arial, sans-serif;
+  }
+  
+  /* Réinitialisation */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body */
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    line-height: 1.6;
+  }
+  
+  /* Header */
+  header {
+    background-color: var(--header-bg);
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+  }
+  header h1 {
+    font-size: 2rem;
+  }
+  
+  /* Navigation */
+  nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+  }
+  nav a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 6px 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 3px;
+    transition: background-color 0.3s;
+  }
+  nav a:hover {
+    background-color: var(--link-hover);
+    color: #fff;
+  }
+  
+  /* Container */
+  .container {
+    display: flex;
+    margin: 20px auto;
+    max-width: 1200px;
+    background-color: var(--content-bg);
+    border: 1px solid var(--border-color);
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 220px;
+    padding: 15px;
+    background-color: var(--sidebar-bg);
+    border-right: 1px solid var(--border-color);
+  }
+  .sidebar h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 5px;
+  }
+  .sidebar ul {
+    list-style: none;
+    margin-top: 10px;
+  }
+  .sidebar ul li {
+    margin-bottom: 8px;
+  }
+  .sidebar ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+  }
+  .sidebar ul li a:hover {
+    color: var(--link-color);
+  }
+  
+  /* Content */
+  .content {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  /* Articles */
+  article {
+    background-color: var(--bg-color);
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 3px;
+  }
+  article h2 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+  }
+  article p {
+    margin-bottom: 10px;
+  }
+  
+  /* Liens dans les articles */
+  article a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  article a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Auteur */
+  .author-info {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 10px;
+  }
+  .author-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--border-color);
+    margin-right: 10px;
+  }
+  .author-details {
+    font-size: 0.9rem;
+  }
+  .author-name a {
+    color: var(--link-color);
+    text-decoration: none;
+  }
+  .author-name a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: var(--footer-bg);
+    padding: 15px;
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  .footer-left, .footer-right {
+    flex: 1;
+    text-align: center;
+  }
+  
+  /* Responsive */
+  @media (max-width: 800px) {
+    .container {
+      flex-direction: column;
+    }
+    .sidebar {
+      width: 100%;
+      border-right: none;
+      border-bottom: 1px solid var(--border-color);
+    }
+    nav {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
