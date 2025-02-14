@@ -19,11 +19,9 @@ if (isset($_GET['theme']) && in_array($_GET['theme'], $availableThemes)) {
 }
 
 // Language management
-if (isset($_GET['lang']) && in_array($_GET['lang'], $availableLanguages)) {
+if (isset($_GET['lang']) && in_array($_GET['lang'], 'en')) {
     $lang_code = $_GET['lang'];
     setcookie('lang', $lang_code, time() + (86400 * 30), "/");
-} elseif (isset($_COOKIE['lang']) && in_array($_COOKIE['lang'], $availableLanguages)) {
-    $lang_code = $_COOKIE['lang'];
 } else {
     $lang_code = $defaultLanguage;
 }
