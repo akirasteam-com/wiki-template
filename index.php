@@ -188,6 +188,24 @@ function renderSidebar() {
             endif;
             ?>
         </div>
+        <h5 class="card-title mb-3"><i class="bi bi-clock-history me-2"></i>Articles</h5>
+        <div class="list-group mb-3">
+            <?php 
+            $recentArticles = listArticles();
+            if (!empty($recentArticles)):
+                foreach ($recentArticles as $art):
+                    $slug = sanitizeSlug($art['title']);
+                    ?>
+                    <a href="index.php?article=<?= urlencode($slug) ?>" class="list-group-item list-group-item-action">
+                        <i class="bi bi-file-earmark-text me-2"></i><?= htmlspecialchars($art['title']) ?>
+                    </a>
+                <?php 
+                endforeach;
+            else:
+                echo '<p class="text-muted small">No recent articles.</p>';
+            endif;
+            ?>
+        </div>
         <h5 class="card-title mb-3"><i class="bi bi-archive me-2"></i>Archived Articles</h5>
         <div class="list-group">
             <?php 
